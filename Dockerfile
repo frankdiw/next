@@ -1,5 +1,7 @@
 FROM node:20-alpine
 WORKDIR /
 COPY . .
-RUN npm run start
+RUN npm install
+RUN npm run build
 EXPOSE 3000
+CMD ["npm", "start"]
